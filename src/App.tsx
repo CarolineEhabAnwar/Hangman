@@ -62,7 +62,11 @@ function App() {
         {isLoser && "Nice Try! - Refrech to try again"}
       </div>
       <HangmanDrawing numberOfGuesses={incorrectLetters?.length} />
-      <HangmanWord guessedLetters={guessedLetters} wordToGuess={wordToGuess} />
+      <HangmanWord
+        guessedLetters={guessedLetters}
+        wordToGuess={wordToGuess}
+        reveal={isLoser}
+      />
       <div style={{ alignSelf: "stretch" }}>
         <Keyboard
           disabled={isWinner || isLoser}
